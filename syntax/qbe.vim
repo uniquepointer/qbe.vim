@@ -28,16 +28,17 @@ syn keyword ssaIns phi
 "Jumps
 syn keyword ssaIns jmp jnz ret
 
+
 syn region ssaString start=/\v"/ skip=/\v\\./ end=/\v"/
 syn match ssaComment "#.*$" contains=sltyTodo
 syn match ssaAggType ":\w*"
 syn match ssaNum "\d\+"
 syn match ssaLabel "@\w*"
 syn match ssaFunc "\$\w*(.*)"
+syn keyword ssaFunc2 function
 syn match ssaLocal "%\w*"
 syn match ssaGlobal "\$\w*"
 syn match ssaOp "[=]"
-syn match ssaTypes "[\ =]\{1}[wlsdbh]\ \{1}"
 syn keyword ssaLoosies type export
 syn keyword ssaTODO contained TODO FIXME XXX NOTE
 
@@ -48,6 +49,7 @@ hi def link ssaAggType Typedef
 hi def link ssaNum Number
 hi def link ssaLabel Label
 hi def link ssaFunc Function
+hi def link ssaFunc2 Function
 hi def link ssaLocal Identifier
 hi def link ssaGlobal Macro
 hi def link ssaOp Operator
