@@ -42,11 +42,11 @@ syn match ssaOp "[=]"
 syn keyword ssaLoosies type export
 syn keyword ssaTODO contained TODO FIXME XXX NOTE
 
+hi def link ssaNum Number
 hi def link ssaIns Keyword
 hi def link ssaString String
 hi def link ssaComment Comment
 hi def link ssaAggType Typedef
-hi def link ssaNum Number
 hi def link ssaLabel Label
 hi def link ssaLocal Identifier
 hi def link ssaGlobal Macro
