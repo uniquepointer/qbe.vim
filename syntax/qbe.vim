@@ -29,7 +29,7 @@ syn keyword ssaIns phi
 "Jumps
 syn keyword ssaIns jmp jnz ret
 
-syn match ssaNum display "\<d[0-9_]*\(u\=l\=\|l\=u\=\)\>"
+syn match ssaNum display "\<\d[0-9_]*\>" 
 
 syn region ssaString start=/\v"/ skip=/\v\\./ end=/\v"/
 syn match ssaComment "#.*$" contains=sltyTodo
@@ -39,7 +39,7 @@ syn match ssaLocal "%\w*"
 syn match ssaGlobal "\$\w*"
 syn match ssaFunc "\$\w*(.*)"
 syn keyword ssaFunc2 function
-syn match ssaOp "[=]"
+syn match ssaOp "[=-+]"
 syn keyword ssaTODO contained TODO FIXME XXX NOTE
 
 hi def link ssaNum Number
