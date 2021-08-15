@@ -7,6 +7,8 @@ if exists("b:current_syntax")
   finish
 endif
 
+syn match ssaNum "\d\+"
+
 "Arithmetic and bits
 syn keyword ssaIns add and div mul or rem sar shl shr sub udiv urem xor 
 "Memory
@@ -28,11 +30,9 @@ syn keyword ssaIns phi
 "Jumps
 syn keyword ssaIns jmp jnz ret
 
-
 syn region ssaString start=/\v"/ skip=/\v\\./ end=/\v"/
 syn match ssaComment "#.*$" contains=sltyTodo
 syn match ssaAggType ":\w*"
-syn match ssaNum "\d\+"
 syn match ssaLabel "@\w*"
 syn match ssaLocal "%\w*"
 syn match ssaGlobal "\$\w*"
