@@ -1,6 +1,6 @@
- robodep.vim
-syntax highlighting for *.slty files
+qbe.vim
+syntax highlighting for *.ssa or *.qbe files
 
 to install simply use your favourite plugin manager
 
-Plug 'uniquepointer/saltys.vim'
+Plug 'uniquepointer/qbe.vim'
