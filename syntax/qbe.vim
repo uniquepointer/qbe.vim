@@ -34,10 +34,10 @@ syn match ssaComment "#.*$" contains=sltyTodo
 syn match ssaAggType ":\w*"
 syn match ssaNum "\d\+"
 syn match ssaLabel "@\w*"
-syn match ssaFunc "\$\w*("
-syn keyword ssaFunc2 function
 syn match ssaLocal "%\w*"
 syn match ssaGlobal "\$\w*"
+syn match ssaFunc "\$\w*("
+syn keyword ssaFunc2 function
 syn match ssaOp "[=]"
 syn keyword ssaLoosies type export
 syn keyword ssaTODO contained TODO FIXME XXX NOTE
