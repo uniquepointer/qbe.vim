@@ -1,1 +1,1 @@
-au BufNewFile,BufRead *.ssa set filetype=qbe
+au BufNewFile,BufRead *.ssa,*.qbe set filetype=qbe
