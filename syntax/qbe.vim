@@ -1,7 +1,7 @@
 " Vim syntax file
-" Language: Robopill Dependency Handler
-" Maintainer: hyakuburns
-" Latest Revision: ur mom
+" Language: QBE - Quick Compiler Backend / SSA - Static Single Assignment
+" Maintainer: uniquepointer
+" Latest Revision: now
 
 if exists("b:current_syntax")
   finish
@@ -35,13 +35,13 @@ syn region ssaString start=/\v"/ skip=/\v\\./ end=/\v"/
 syn match ssaComment "#.*$" contains=sltyTodo
 syn match ssaAggType ":\w*"
 syn match ssaLabel "@\w*"
-syn match ssaLocal "%\w*"
-syn match ssaGlobal "\$\w*"
-"syn match ssaFunc "\$\w*(.*)" going to comment this out until im better
-syn keyword ssaFunc2 function
+syn match ssaLocal "%[a-zA-Z0-9._]*[^()\s\,]"
+syn match ssaGlobal "\$[a-zA-Z0-9._]*[^()\s\,]"
+"syn match ssaFunc contains=cParen"
+syn match ssaFunc "\$[a-zA-Z0-9.]*("he=e-1 
 syn match ssaOp "[=\-\+]"
 syn keyword ssaTODO contained TODO FIXME XXX NOTE
-syn keyword ssaLoosies export
+syn keyword ssaLoosies export function
 
 hi def link ssaNum Number
 hi def link ssaIns Keyword
@@ -56,7 +56,5 @@ hi def link ssaTypes Type
 hi def link ssaLoosies Statement
 hi def link ssaTODO Todo
 hi def link ssaFunc Function
-hi def link ssaFunc2 Function
 
 let b:current_syntax = "qbe"
-
