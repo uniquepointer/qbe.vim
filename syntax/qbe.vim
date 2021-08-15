@@ -30,11 +30,12 @@ syn keyword ssaIns phi
 syn keyword ssaIns jmp jnz ret
 
 syn match ssaNum display "\<\d[0-9_]*\>" 
+syn match ssaFsugar display "\<[ds]_\d*\>" 
 
 syn region ssaString start=/\v"/ skip=/\v\\./ end=/\v"/
 syn match ssaComment "#.*$" contains=sltyTodo
 syn match ssaAggType ":\w*"
-syn match ssaLabel "@\w*"
+syn match ssaLabel "@[a-zA-Z0-9._]*[^\\\s]"
 syn match ssaLocal "%[a-zA-Z0-9._]*[^()\s\,]"
 syn match ssaGlobal "\$[a-zA-Z0-9._]*[^()\s\,]"
 "syn match ssaFunc contains=cParen"
@@ -44,13 +45,14 @@ syn keyword ssaTODO contained TODO FIXME XXX NOTE
 syn keyword ssaLoosies export function
 
 hi def link ssaNum Number
+hi def link ssaFsugar Number
 hi def link ssaIns Keyword
 hi def link ssaString String
 hi def link ssaComment Comment
 hi def link ssaAggType Typedef
-hi def link ssaLabel Label
+hi def link ssaLabel Conditional
 hi def link ssaLocal Identifier
-hi def link ssaGlobal Macro
+hi def link ssaGlobal Constant
 hi def link ssaOp Operator
 hi def link ssaTypes Type
 hi def link ssaLoosies Statement
