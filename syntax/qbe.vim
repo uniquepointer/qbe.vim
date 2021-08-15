@@ -37,9 +37,9 @@ syn match ssaAggType ":\w*"
 syn match ssaLabel "@\w*"
 syn match ssaLocal "%\w*"
 syn match ssaGlobal "\$\w*"
-syn match ssaFunc "\$\w*(.*)"
+"syn match ssaFunc "\$\w*(.*)" going to comment this out until im better
 syn keyword ssaFunc2 function
-syn match ssaOp "[=-+]"
+syn match ssaOp "[=\-\+]"
 syn keyword ssaTODO contained TODO FIXME XXX NOTE
 
 hi def link ssaNum Number
