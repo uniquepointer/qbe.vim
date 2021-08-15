@@ -1,0 +1,6 @@
+ robodep.vim
+syntax highlighting for *.slty files
+
+to install simply use your favourite plugin manager
+
+Plug 'uniquepointer/saltys.vim'
