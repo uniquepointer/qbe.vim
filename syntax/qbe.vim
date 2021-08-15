@@ -48,14 +48,14 @@ hi def link ssaComment Comment
 hi def link ssaAggType Typedef
 hi def link ssaNum Number
 hi def link ssaLabel Label
-hi def link ssaFunc Function
-hi def link ssaFunc2 Function
 hi def link ssaLocal Identifier
 hi def link ssaGlobal Macro
 hi def link ssaOp Operator
 hi def link ssaTypes Type
 hi def link ssaLoosies Special
 hi def link ssaTODO Todo
+hi def link ssaFunc Function
+hi def link ssaFunc2 Function
 
 let b:current_syntax = "qbe"
 
