@@ -31,8 +31,9 @@ syn keyword ssaIns jmp jnz ret
 
 syn match ssaNum display "\<\d[0-9_]*\>" 
 syn match ssaFsugar display "\<[ds]_\d*\>" 
+syn match ssaEscape contained "\\\d\{3}"
 
-syn region ssaString start=/\v"/ skip=/\v\\./ end=/\v"/
+syn region ssaString start=/\v"/ skip=/\v\\./ end=/\v"/ contains=ssaEscape
 syn match ssaComment "#.*$" contains=sltyTodo
 syn match ssaAggType ":\w*"
 syn match ssaLabel "@[a-zA-Z0-9._]*[^\\\s]"
@@ -46,6 +47,7 @@ syn keyword ssaLoosies export function
 
 hi def link ssaNum Number
 hi def link ssaFsugar Number
+hi def link ssaEscape SpecialChar
 hi def link ssaIns Keyword
 hi def link ssaString String
 hi def link ssaComment Comment
